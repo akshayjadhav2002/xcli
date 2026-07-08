@@ -1,0 +1,28 @@
+[project]
+name = "xcli"
+version = "0.1.0"
+description = "AI Linux Command Assistant"
+readme = "README.md"
+requires-python = ">=3.14.4"
+dependencies = [
+    "google-genai>=2.10.0",
+    "psutil>=7.2.2",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+    "typer>=0.26.8",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.15.20",
+]
+
+[project.scripts]
+x = "app.cli:main"
+xcli = "app.main:main"
+
+[tool.ruff]
+line-length = 100

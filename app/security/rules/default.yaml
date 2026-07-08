@@ -1,0 +1,64 @@
+commands:
+
+  ls:
+    risk: safe
+    confirm: false
+
+  pwd:
+    risk: safe
+    confirm: false
+
+  whoami:
+    risk: safe
+    confirm: false
+
+  find:
+    risk: safe
+    confirm: false
+
+    blocked_arguments:
+      - "-delete"
+
+  mkdir:
+    risk: medium
+    confirm: true
+
+  touch:
+    risk: medium
+    confirm: true
+
+  mv:
+    risk: medium
+    confirm: true
+
+  cp:
+    risk: medium
+    confirm: true
+
+  chmod:
+    risk: medium
+    confirm: true
+
+    blocked_arguments:
+      - "777"
+
+    warning_arguments:
+      - "755"
+
+  kill:
+    risk: medium
+    confirm: true
+
+    blocked_arguments:
+      - "-9"
+
+blocked_commands:
+
+  - rm
+  - sudo
+  - reboot
+  - shutdown
+  - poweroff
+  - mkfs
+  - dd
+  - fdisk
